@@ -7,6 +7,7 @@ import bcrpt from 'bcrypt'
 // @route GET /users
 // @access Private
 const getAllUsers = asyncHandler(async (req,res) => {
+    const users = await User.find().select('-password')
 
 })
 
